@@ -32,6 +32,7 @@ export class QuoteComponent implements OnInit {
       if (toDelete){
         this.Quote.splice(index,1)
     }
+    
   }
 }
   

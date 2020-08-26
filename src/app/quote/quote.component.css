@@ -15,11 +15,12 @@ h1{
     background-size: 100% 100%;
     background-repeat: repeat;
     background-attachment: fixed;
-   
+   opacity: 0.9;
 
 }
 .body{
     background-image: url(https://images.pexels.com/photos/36717/amazing-animal-beautiful-beautifull.jpg?cs=srgb&dl=pexels-pixabay-36717.jpg&fm=jpg);
     background-size: cover;
     background-attachment: fixed;
+    
 }
