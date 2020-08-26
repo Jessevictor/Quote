@@ -1,0 +1,25 @@
+h1{
+    font-family: 'Lobster', cursive;
+    text-align: center;
+    color: tomato;
+}
+.container{
+    font-family: 'Indie Flower', cursive;
+}
+.card{
+    margin-top: 20px;
+    opacity: 0.9;
+}
+.row{
+    background-image:url(https://images.pexels.com/photos/733854/pexels-photo-733854.jpeg?cs=srgb&dl=pexels-tirachard-kumtanom-733854.jpg&fm=jpg);
+    background-size: 100% 100%;
+    background-repeat: repeat;
+    background-attachment: fixed;
+   
+
+}
+.body{
+    background-image: url(https://images.pexels.com/photos/36717/amazing-animal-beautiful-beautifull.jpg?cs=srgb&dl=pexels-pixabay-36717.jpg&fm=jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}

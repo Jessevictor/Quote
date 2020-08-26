@@ -1,0 +1,27 @@
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Indie+Flower&family=Lobster&display=swap" rel="stylesheet">
+    <div class="body">
+     <div class="container">
+        <h1>Quotes</h1>
+        <hr>
+        <div class="row">
+          <div class="col-md-6">
+            <div *ngFor='let Quote of Quote ;let i = index'>
+              <div class="card">
+                <h6 id={{i}} appStrikethrough>{{Quote.Quote}} Posted on {{Quote.completeDate|date|uppercase}}</h6>
+                <button (click)='toggleDetails(i)' class="btn btn-primary">Show/Hide</button>
+              </div>
+            
+      
+              <div *ngIf='Quote.showDescription'>
+                <app-quote-detail  [Quote]='Quote' (isComplete) = 'deleteQuote($event,i)'></app-quote-detail>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+              <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+          </div>
+        </div>
+    </div>
+    
+
+  

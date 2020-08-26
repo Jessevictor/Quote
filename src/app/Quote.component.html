@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Quote</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&display=swap" rel="stylesheet">
+  </head>
+  <body>
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <div class="container">
+          <h1> <b>Your Quotes</b> </h1>
+          <hr>
+
+         <div class="row">
+              <div class="col-md-6">
+                 <div *ngFor='let goal of goals;let i = index'>
+                   <div class="card">
+                  <h6 id={{i}} appStrikethrough>{{goal.name}} Posted on {{goal.completeDate|date|uppercase}}</h6>
+                <button (click)='toggleDetails(i)' class="btn btn-primary">Show/Hide</button>
+          </div>
+        
+
+           <div *ngIf='goal.showDescription'>
+              <app-Quote-detail  [goal]='goal' (isComplete) = 'deleteGoal($event,i)'></app-Quote-detail>
+               </div>
+                </div>
+               </div>
+              <div class="col-md-6">
+            <app-Quote-form (addGoal)="addNewGoal($event)"></app-Quote-form>
+        </div>
+      </div>
+              <p *ngIf='goals.length > 5'>Add more Quotes</p>
+ </div>
+</body>
+</html> 
+  
+

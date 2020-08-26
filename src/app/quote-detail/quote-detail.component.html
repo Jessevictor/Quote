@@ -1,0 +1,10 @@
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<div class="card">
+<p>{{Quote.description}}</p>
+<button (click)= 'QuoteDelete(true)' class="btn btn-outline-danger">Delete</button>
+<button style="margin-left:10px;" class="btn btn-outline-success" (click)='upVote($event)'> {{Quote.upVote}} <i
+    class="fa fa-thumbs-up" aria-hidden="true">upVote</i></button>
+<button style="margin-left:20px;" class="btn btn-outline-warning" (click)='downVote($event)'>{{Quote.downVote}} <i
+    class="fa fa-thumbs-down" aria-hidden="true">downVote</i></button>
+
+</div>
